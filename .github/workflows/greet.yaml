@@ -1,4 +1,4 @@
-name: Test
+name: Greet
 
 on:
   workflow_call:
