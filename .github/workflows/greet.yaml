@@ -1,0 +1,15 @@
+name: Test
+
+on:
+  workflow_call:
+    inputs:
+      user:
+        default: ''
+        required: false
+        type: string
+
+jobs:
+  reusable:
+    uses: ./.github/workflows/say-hello.yaml
+    with:
+      message: "Hello ${{ inputs.user }}"
