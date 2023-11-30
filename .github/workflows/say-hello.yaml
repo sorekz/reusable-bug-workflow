@@ -1,0 +1,16 @@
+name: Say hello
+
+on:
+  workflow_call:
+    inputs:
+      message:
+        default: ''
+        required: false
+        type: string
+
+jobs:
+  reusable:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "${{ inputs.message }}"
